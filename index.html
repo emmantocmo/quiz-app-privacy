@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Padayon Studio Privacy Policy</title>
+<style>body{margin:0;background:#faf8f3;color:#242421;font:17px/1.7 system-ui,sans-serif}main{max-width:760px;margin:auto;padding:48px 24px}h1,h2{line-height:1.25}h1{font-size:2.3rem}h2{margin-top:2rem;font-size:1.35rem}a{color:#2556aa}footer{border-top:1px solid #ddd;margin-top:36px;padding-top:20px;font-size:14px}</style>
+</head>
+<body><main>
+<h1>Privacy Policy</h1>
+<p><strong>Padayon Studio for Android</strong><br>Effective date: November 23, 2026</p>
+<p>This policy explains how Padayon Studio, maintained by <a href="https://github.com/emmantocmo">emmantocmo</a>, handles information when you create and save quizzes, flashcards, and study notes.</p>
+<h2>Accounts and saved quizzes</h2>
+<p>If you create an account, Supabase handles authentication and stores your email address, account identifier, and authentication information. When you sign in, your saved quizzes and other study-set content, subject folders, and synchronization timestamps are stored in Supabase so you can back up and synchronize your library. The app also keeps local copies on your phone. Guest study sets remain on your device unless you choose to sign in and synchronize them.</p>
+<h2>Your Gemini and Groq API keys</h2>
+<p>Your personal Gemini and Groq API keys are stored encrypted on your Android phone using Android Keystore-backed encryption. They are not included in your Supabase quiz backups. The app decrypts a key in memory when it needs to authenticate requests and sends it over HTTPS directly to the selected provider. Encryption on your phone does not mean that the provider never receives the key: the provider needs it to authorize your requests.</p>
+<h2>PDF processing and AI generation</h2>
+<p>Padayon extracts selectable PDF text locally on your phone. In Gemini mode, that extracted text is sent directly to Google Gemini to build quizzes, flashcards, and notes. If a PDF has little or no selectable text, Gemini mode can send the PDF file itself to Google for document processing. In Groq mode, extracted text is sent directly to Groq; Groq mode requires selectable text. Requests can include document names, page labels, and your generation settings.</p>
+<p>Offline generation does not send your PDFs or extracted text to an AI provider. Source PDFs are not uploaded to Supabase as part of quiz backup, but saved generated study content can contain information from those PDFs.</p>
+<h2>Third-party processing</h2>
+<p>Google and Groq process AI requests under their own terms and your provider account settings. Google's unpaid Gemini services may use submitted content and responses to improve products and may involve human review. Paid services have different data-use provisions, including limited logging for safety and legal purposes. Do not send sensitive, confidential, or personal information through Google's unpaid services. See the <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a> and <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<p>Groq retains usage metadata and may retain inputs or outputs in limited circumstances, including reliability and abuse investigations. Your account's data controls affect that processing. See <a href="https://console.groq.com/docs/your-data">Your Data in GroqCloud</a>. Supabase operates our account and backup infrastructure; see its <a href="https://supabase.com/privacy">privacy information</a>. These providers may process information outside your country.</p>
+<h2>Live challenges</h2>
+<p>If you use live quiz challenges, Supabase supports room membership and real-time play. Quiz questions, answers, scores, and session information are exchanged as needed with participants in your room. Only share study content that you are comfortable making available to those participants.</p>
+<h2>Retention and deletion</h2>
+<p>Local study data and preferences remain until you delete them, clear app data, or uninstall the app. You can remove a provider key by clearing its field in Settings. Saved cloud quizzes remain until you delete and synchronize them or delete your account. Signing out does not delete your cloud account.</p>
+<p>Settings includes an account-deletion action that requests deletion of your Supabase authentication account and cloud-backed study sets, then clears local Padayon data, including saved API keys. You can also read the <a href="https://github.com/emmantocmo/padayon-account-deletion">account-deletion instructions</a>. Infrastructure backups, security logs, and content already received by AI providers are subject to the relevant provider's retention rules; deleting your Padayon account does not delete your Google or Groq account or revoke its API keys.</p>
+<h2>Security and your choices</h2>
+<p>The app uses HTTPS for provider and Supabase connections and encrypts stored AI keys on your phone. No storage or transmission method guarantees absolute security. You can use offline generation, use the app as a guest, choose your AI provider, remove saved quizzes, clear a key, or delete your account.</p>
+<h2>Gemini age restriction</h2>
+<p>Gemini generation in Padayon is restricted to adults aged 18 or older. The app asks for an age confirmation before the first Gemini generation. It stores that confirmation locally and does not ask for a date of birth.</p>
+<h2>Contact and policy updates</h2>
+<p>For privacy questions, visit the <a href="https://github.com/emmantocmo">developer's GitHub profile</a> or <a href="https://github.com/emmantocmo/quiz-app-privacy/issues">open a privacy inquiry</a>. GitHub issues are public: do not include API keys, passwords, private documents, or account details. Use the in-app account-deletion control to remove your account.</p>
+<p>We may update this policy when the app's practices change. The effective date above identifies the current version.</p>
+<footer>Padayon Studio · Privacy Policy</footer>
+</main></body></html>
